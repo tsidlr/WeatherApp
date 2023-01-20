@@ -1,0 +1,32 @@
+<div class="eingabeForm">
+  <div class="box">
+
+    <mat-form-field>
+      <mat-label>Geben Sie die Stadt ein</mat-label>
+      <input matInput #box placeholder="Stadt" name="Stadt" />
+    </mat-form-field>
+    <button mat-button color="primary" (click)="getWeatherData(box.value)">
+      Senden
+    </button>
+  </div>
+</div>
+<article class="widget">
+
+  <div class="weatherIcon">
+    <div><i *ngIf="WeatherData.weather[0].description == 'Clouds'"class="wi wi-day-cloudy cloud"></i></div>
+    <div><i *ngIf="WeatherData.weather[0].description == 'Mist'" class="wi wi-fog"></i></div>
+    <div><i *ngIf="WeatherData.weather[0].description == 'Clear'" class="wi wi-day-sunny"></i></div>
+  </div>
+
+  <div class="weatherInfo">
+    <div class="temperature">
+      <span>{{ WeatherData!.main.temp.toFixed(0)}}&deg;</span>
+    </div>
+    <div class="description">
+      <div class="weatherCondition">{{ WeatherData.weather[0].description }}</div>
+      <div class="place">{{ WeatherData.name }}</div>
+    </div>
+  </div>
+  <div class="date">{{ currentDate.toDateString() }}</div>
+</article>
+
