@@ -11,3 +11,5 @@ Extras:
 - HeaderComponente fürs Aussehen :)
 - HomeComponente für eine bessere Übersicht der Datein-Struktur
 - Materialdesign fürs Frontend
+
+Preview: https://bejewelled-kitsune-9a994e.netlify.app
